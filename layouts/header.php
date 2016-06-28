@@ -4,10 +4,9 @@
         <div class="divPanel topArea notop nobottom">
             <div class="row-fluid">
                 <div class="span12">
-
                     <div id="divLogo" class="pull-left">
-                        <a href="index.html" id="divSiteTitle">Your Name Here</a><br />
-                        <a href="index.html" id="divTagLine">Your Tag Line Here</a>
+                        <a href="index.html" id="divSiteTitle"><?=Yii::$app->getTextBlock('header-logo1')->content?></a><br />
+                        <a href="index.html" id="divTagLine"><?=Yii::$app->getTextBlock('header-logo2')->content?></a>
                     </div>
 
                     <div id="divMenuRight" class="pull-right">
@@ -17,7 +16,16 @@
                             </button>
                             <div class="nav-collapse collapse">
                                 <ul class="nav nav-pills ddmenu">
-                                    <li class="dropdown active"><a href="index.html">Home</a></li>
+                                    <?php foreach(Yii::$app->getCatalogs() as $item) {?>
+                                        <li class="dropdown active">
+                                            <a href="<?=$item['url']?>">
+                                                <?=$item['surname']?>
+                                            </a>
+                                        </li>
+                                    <?php } ?>
+
+
+                                    <!--li class="dropdown active"><a href="index.html">Home</a></li>
                                     <li class="dropdown"><a href="about.html">About</a></li>
                                     <li class="dropdown">
                                         <a href="page.html" class="dropdown-toggle">Page <b class="caret"></b></a>
@@ -37,7 +45,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="gallery.html">Gallery</a></li>
-                                    <li class="dropdown"><a href="contact.php">Contact</a></li>
+                                    <li class="dropdown"><a href="contact.php">Contact</a></li-->
                                 </ul>
                             </div>
                         </div>

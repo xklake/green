@@ -16,19 +16,23 @@ class GreenAssets extends AssetBundle
     public $baseUrl = '@web/assets';
 
     public $css = [
-  /*      'css/main.css',
-        'css/bootstrap.min.css',
-        'css/bootstrap-theme.css',
-        'css/font-awesome.min.css',
-  */  ];
-
-    public $js = [
-    /*    'js/headroom.min.js',
-        'js/jQuery.headroom.min.js',
-        'js/respond.min.js',
-        'js/template.js',
-    */];
-    public $depends = [
+        'css/bootstrap/bootstrap.min.css',
+        'css/bootstrap/bootstrap-responsive.min.css',
+        'css/carousel/style.css',
+        //'css/fontawesome/font-awesome.min.css',
+        'css/camera.css',
+        'css/custom.css',
     ];
 
+    public $js = [
+        'js/jquery.min.js',
+        'js/bootstrap/bootstrap.min.js',
+        'js/default.js',
+        'js/carousel/jquery.carouFredSel-6.2.0-packed.js',
+        'js/camera/camera.min.js',
+        'js/easing/jquery.easing.1.3.js',
+    ];
+
+    public $depends = [
+    ];
 }

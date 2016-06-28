@@ -20,10 +20,6 @@ frontend\web\template\green\GreenAssets::register($this);
     <meta name="description" content="<?= Html::encode(Yii::$app->params['description']) ?>" />
     <meta name="author" content="Panda blog Team" />
     <meta name="Copyright" content="Panda blog" />
-    <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-
-    <link href="/assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -42,23 +38,16 @@ frontend\web\template\green\GreenAssets::register($this);
     <link rel="stylesheet" href="/assets/css/fontawesome/css/font-awesome-ie7.min.css">
     <![endif]-->
 
-    <link href="/assets/css/carousel/style.css" rel="stylesheet" type="text/css" />
-    <link href="/assets/css/camera.css" rel="stylesheet" type="text/css" />
-
     <link href="http://fonts.googleapis.com/css?family=Allura" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Palatino+Linotype" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet" type="text/css">
 
-    <link href="/assets/css/custom.css" rel="stylesheet" type="text/css" />
-
-
-
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode(Yii::$app->params['title']) ?></title>
+    <title><?=$this->title?></title>
+
     <?php $this->head() ?>
 </head>
 <body>
