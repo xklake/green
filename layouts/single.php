@@ -13,10 +13,10 @@ $this->beginContent('@frontend/web/template/green/layouts/main.php');
     <div class="divPanel page-content">
         <!--Edit Main Content Area here-->
         <div class="row-fluid">
-
-
-            <?=$content?>
-
+            <div class="span8" style="color:grey;">
+                <?=$content?>
+            </div>
+            <?php echo($this->render('/serviceslist'))  ?>
         </div>
     </div>
 </div>

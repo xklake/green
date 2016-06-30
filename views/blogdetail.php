@@ -10,14 +10,13 @@
 
 <div class="row-fluid">
     <!--Edit Main Content Area here-->
-    <div class="span12" id="divMain">
-
-        <h4><?=$post->surname?></h4>
-        <br/>
+    <div class="span8" id="divMain">
+        <h3><?=$post->surname?></h3>
+        <hr/>
         <p>
             <?=$post->content?>
         </p>
     </div>
+    <?php echo($this->render('/serviceslist'))  ?>
     <!--End Main Content Area-->
 </div>
-

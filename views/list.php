@@ -7,20 +7,28 @@
  */
 ?>
 
+<h3>Our Services</h3>
+
+<hr/>
+
 <div class="row-fluid">
-    <?php foreach($posts as $item){ ?>
-        <div class="span4">
-            <h4>
-                <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['blog/default/view', 'id'=> $item->id])?>" target="_self">
-                    <?=$item->surname?>
-                </a>
-            </h4>
+    <?php
+    $posts = array_reverse($posts);
+    foreach($posts as $item){ ?>
+        <div class="span3">
             <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['blog/default/view', 'id'=> $item->id])?>" target="_self">
                 <img src="<?='/'. $item->banner?>" class="img-polaroid" style="margin:5px 0px 15px;" alt="">
             </a>
-
-            <p><?=$item->brief?> <br/></p>
-            <p><a class="btn btn-primary" style="margin:5px 0px 15px;">Learn more</a></p>
+            <p style="text-align:center;">
+                <a href="<?=Yii::$app->urlManager->createAbsoluteUrl(['blog/default/view', 'id'=> $item->id])?>" target="_self">
+                    <span style="font-size: 1.2rem;">
+                        <strong><?=$item->surname?></strong>
+                    </span>
+                    <br/>
+                </a>
+                <?=$item->brief?>
+                <br/>
+            </p>
         </div>
     <?php } ?>
 </div>

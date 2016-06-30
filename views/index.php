@@ -22,11 +22,12 @@ $comments = \funson86\blog\models\BlogComment::findAll(['status' => \funson86\bl
                     <div class="row-fluid">
                         <div class="span6">
                             <div id="divHeaderText" class="page-content">
-                                <div id="divHeaderLine1">Welcome to Shangri-la Chinese Health Center!</div><br />
-                                <div id="divHeaderLine2">We are located in Victoria station, London</div><br />
+                                <div id="divHeaderLine1"><?=Yii::$app->getTextBlock('home-greeting1')->content?></div><br />
+                                <div id="divHeaderLine2"><?=Yii::$app->getTextBlock('home-greeting2')->content?></div><br />
                                 <!--div id="divHeaderLine3"><a class="btn btn-danger" href="#"></a></div-->
                             </div>
                         </div>
+
                         <div class="span6">
                             <!--Edit Camera Slider here-->
                             <div id="camera_wrap">
@@ -58,17 +59,15 @@ $comments = \funson86\blog\models\BlogComment::findAll(['status' => \funson86\bl
     <div class="divPanel page-content">
         <!--Edit Main Content Area here-->
         <div class="row-fluid">
-
                 <h1>Our Services</h1>
                 <hr style="margin:45px 0 35px" />
                 <div class="row-fluid">
-                    <?php $service = Yii::$app->getImageByGroup(2);
-                    foreach($service as $item) { ?>
-                    <div class="span4">
-                        <h4><?=$item->name?></h4>
-                        <img src="<?='/'. $item->image?>" class="img-polaroid" style="margin:5px 0px 15px;" alt="">
-                        <p><?=$item->description?> <br/></p>
-                        <p><a class="btn btn-primary" style="margin:5px 0px 15px;">Learn more</a></p>
+                    <?php $services = \funson86\blog\models\BlogPost::findAll(['status'=>\funson86\blog\models\Status::STATUS_ACTIVE]);
+
+                    foreach($services as $item) { ?>
+                    <div class="span3">
+                        <img src="<?='/'. $item->banner?>" class="img-polaroid" style="margin:5px 0px 15px;" alt="">
+                        <p style="color:grey;text-align: center;"><?=$item->surname?> <br/></p>
                     </div>
                     <?php } ?>
                 </div>
@@ -80,7 +79,7 @@ $comments = \funson86\blog\models\BlogComment::findAll(['status' => \funson86\bl
                 <!--Edit Blockquote here-->
                 <?php foreach($comments as $item) { ?>
                     <blockquote>
-                        <h3 class="text-primary"><?=$item->content?></h3>
+                        <h4 class="text-primary"><span style="color:grey"><?=$item->content?></span></h4>
                         <small><?=$item->author?></small>
                     </blockquote>
                 <?php } ?>

@@ -5,14 +5,14 @@
             <div class="row-fluid">
                 <div class="span12">
                     <div id="divLogo" class="pull-left">
-                        <a href="index.html" id="divSiteTitle"><?=Yii::$app->getTextBlock('header-logo1')->content?></a><br />
-                        <a href="index.html" id="divTagLine"><?=Yii::$app->getTextBlock('header-logo2')->content?></a>
+                        <a href="<?=Yii::$app->homeUrl?>" id="divSiteTitle"><?=Yii::$app->getTextBlock('header-logo1')->content?></a><br />
+                        <a href="<?=Yii::$app->homeUrl?>" id="divTagLine"><?=Yii::$app->getTextBlock('header-logo2')->content?></a>
                     </div>
 
                     <div id="divMenuRight" class="pull-right">
                         <div class="navbar">
                             <button type="button" class="btn btn-navbar-highlight btn-large btn-primary" data-toggle="collapse" data-target=".nav-collapse">
-                                NAVIGATION <span class="icon-chevron-down icon-white"></span>
+                                Navigation <span class="icon-chevron-down icon-white"></span>
                             </button>
                             <div class="nav-collapse collapse">
                                 <ul class="nav nav-pills ddmenu">

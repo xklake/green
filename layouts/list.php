@@ -13,11 +13,12 @@ $this->beginContent('@frontend/web/template/green/layouts/main.php');
     <div class="divPanel page-content">
         <!--Edit Main Content Area here-->
         <div class="row-fluid">
+            <div class="span12">
 
-            <h3>Our Services</h3>
-            <hr style="margin:15px 0 15px" />
+                <?=$content?>
 
-            <?=$content?>
+                <hr style="margin:45px 0 35px" />
+            </div>
 
         </div>
     </div>

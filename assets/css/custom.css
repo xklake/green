@@ -19,6 +19,7 @@
 /* Headings */
 
 h3, h4, h5, h6 {line-height:1.5 !important}
+h1,h2,h3{ color:grey; }
 
 .lead {
     text-align:center;
@@ -256,7 +257,7 @@ body{background-image: none; background-attachment: initial; background-origin: 
 
 .camera_full_width {margin-left:-0px;margin-right:-0px}
 
-h1 {font-family: 'Open Sans'; font-weight: normal; font-style: normal; font-size: 36px; line-height: 61px; margin-top: 0px; color: rgb(0, 0, 0); text-transform: none;}
+h1 {font-family: 'Open Sans'; font-weight: normal; font-style: normal; font-size: 36px; line-height: 61px; margin-top: 0px; color: grey; text-transform: none;}
 
 .page-content {line-height: 26px; font-family: 'Open Sans', sans-serif; font-size: 15px;}
 

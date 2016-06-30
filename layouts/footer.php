@@ -17,14 +17,8 @@
 
             <div class="row-fluid">
                 <div class="span6" id="footerArea1">
-                    <h3>Our services</h3>
-                    <ul>
-                        <li>abcddfd</li>
-                        <li>abcddfd</li>
-                        <li>abcddfd</li>
-                        <li>abcddfd</li>
-                        <li>abcddfd</li>
-                    </ul>
+                    <h3>Shangrila Health Center</h3>
+                    <?=Yii::$app->getHtmlBlock('footer-aboutus')->content ?>
                 </div>
 
                 <div class="span3" id="footerArea3">
@@ -69,15 +63,15 @@
 
             <div class="row-fluid">
                 <div class="span12">
-                    <p class="copyright">
+                    <p class="copyright" style="text-align: center;">
                         <a href="<?=Yii::$app->homeUrl?>">
                             <?=Yii::$app->setting->get('copyright')?>
-                        </a>,Power by <a href="http://chinasoftware.co.uk" target="_blank" ref="nofollow">China Software UK</a>
+                        </a>
+                        <br/>
+                        Powered by <a href="http://chinasoftware.co.uk" target="_blank" ref="nofollow">China Software UK</a>
                     </p>
                 </div>
             </div>
-            <br />
-
         </div>
 
     </div>
